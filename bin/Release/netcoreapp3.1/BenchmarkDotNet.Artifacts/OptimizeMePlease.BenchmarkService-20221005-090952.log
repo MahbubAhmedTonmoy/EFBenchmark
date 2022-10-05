@@ -1,0 +1,273 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c
+// command took 1.09s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c
+// command took 12.47s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c
+// command took 1.88s and exited with 0
+// ***** Done, took 00:00:15 (15.57 sec)   *****
+// Found 2 benchmarks:
+//   BenchmarkService.GetAuthors: DefaultJob
+//   BenchmarkService.GetAuthors_Optimized: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchmarkService.GetAuthors: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 922add07-7f81-4549-87ef-7ff6e51ae93c.dll --benchmarkName OptimizeMePlease.BenchmarkService.GetAuthors --job Default --benchmarkId 0 in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 307100.00 ns, 307.1000 us/op
+WorkloadJitting  1: 1 op, 2423204100.00 ns, 2.4232 s/op
+
+OverheadJitting  2: 1 op, 1800.00 ns, 1.8000 us/op
+WorkloadJitting  2: 1 op, 1238613100.00 ns, 1.2386 s/op
+
+WorkloadWarmup   1: 1 op, 1248099600.00 ns, 1.2481 s/op
+WorkloadWarmup   2: 1 op, 1248097600.00 ns, 1.2481 s/op
+WorkloadWarmup   3: 1 op, 1234745000.00 ns, 1.2347 s/op
+WorkloadWarmup   4: 1 op, 1227851100.00 ns, 1.2279 s/op
+WorkloadWarmup   5: 1 op, 1214434600.00 ns, 1.2144 s/op
+WorkloadWarmup   6: 1 op, 1226099100.00 ns, 1.2261 s/op
+WorkloadWarmup   7: 1 op, 1228966400.00 ns, 1.2290 s/op
+WorkloadWarmup   8: 1 op, 1221641700.00 ns, 1.2216 s/op
+WorkloadWarmup   9: 1 op, 1215578000.00 ns, 1.2156 s/op
+WorkloadWarmup  10: 1 op, 1254418200.00 ns, 1.2544 s/op
+WorkloadWarmup  11: 1 op, 1230202800.00 ns, 1.2302 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1226879900.00 ns, 1.2269 s/op
+WorkloadActual   2: 1 op, 1221299200.00 ns, 1.2213 s/op
+WorkloadActual   3: 1 op, 1217263600.00 ns, 1.2173 s/op
+WorkloadActual   4: 1 op, 1255630100.00 ns, 1.2556 s/op
+WorkloadActual   5: 1 op, 1344258600.00 ns, 1.3443 s/op
+WorkloadActual   6: 1 op, 1398099900.00 ns, 1.3981 s/op
+WorkloadActual   7: 1 op, 1372898300.00 ns, 1.3729 s/op
+WorkloadActual   8: 1 op, 1348978100.00 ns, 1.3490 s/op
+WorkloadActual   9: 1 op, 1381411700.00 ns, 1.3814 s/op
+WorkloadActual  10: 1 op, 1226016100.00 ns, 1.2260 s/op
+WorkloadActual  11: 1 op, 1220757300.00 ns, 1.2208 s/op
+WorkloadActual  12: 1 op, 1239133600.00 ns, 1.2391 s/op
+WorkloadActual  13: 1 op, 1243109800.00 ns, 1.2431 s/op
+WorkloadActual  14: 1 op, 1281281100.00 ns, 1.2813 s/op
+WorkloadActual  15: 1 op, 1459251800.00 ns, 1.4593 s/op
+WorkloadActual  16: 1 op, 1253917100.00 ns, 1.2539 s/op
+WorkloadActual  17: 1 op, 1195643800.00 ns, 1.1956 s/op
+WorkloadActual  18: 1 op, 1231906800.00 ns, 1.2319 s/op
+WorkloadActual  19: 1 op, 1327786100.00 ns, 1.3278 s/op
+WorkloadActual  20: 1 op, 1279835600.00 ns, 1.2798 s/op
+WorkloadActual  21: 1 op, 1409224600.00 ns, 1.4092 s/op
+WorkloadActual  22: 1 op, 1287569100.00 ns, 1.2876 s/op
+WorkloadActual  23: 1 op, 1267310900.00 ns, 1.2673 s/op
+WorkloadActual  24: 1 op, 1243890200.00 ns, 1.2439 s/op
+WorkloadActual  25: 1 op, 1234700200.00 ns, 1.2347 s/op
+WorkloadActual  26: 1 op, 1247771700.00 ns, 1.2478 s/op
+WorkloadActual  27: 1 op, 1243523400.00 ns, 1.2435 s/op
+WorkloadActual  28: 1 op, 1292013900.00 ns, 1.2920 s/op
+WorkloadActual  29: 1 op, 1276334200.00 ns, 1.2763 s/op
+WorkloadActual  30: 1 op, 1253457100.00 ns, 1.2535 s/op
+WorkloadActual  31: 1 op, 1228948100.00 ns, 1.2289 s/op
+WorkloadActual  32: 1 op, 1246410500.00 ns, 1.2464 s/op
+WorkloadActual  33: 1 op, 1222127900.00 ns, 1.2221 s/op
+WorkloadActual  34: 1 op, 1255426200.00 ns, 1.2554 s/op
+WorkloadActual  35: 1 op, 1236159800.00 ns, 1.2362 s/op
+WorkloadActual  36: 1 op, 1229957300.00 ns, 1.2300 s/op
+WorkloadActual  37: 1 op, 1237438100.00 ns, 1.2374 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1226879900.00 ns, 1.2269 s/op
+WorkloadResult   2: 1 op, 1221299200.00 ns, 1.2213 s/op
+WorkloadResult   3: 1 op, 1217263600.00 ns, 1.2173 s/op
+WorkloadResult   4: 1 op, 1255630100.00 ns, 1.2556 s/op
+WorkloadResult   5: 1 op, 1344258600.00 ns, 1.3443 s/op
+WorkloadResult   6: 1 op, 1348978100.00 ns, 1.3490 s/op
+WorkloadResult   7: 1 op, 1226016100.00 ns, 1.2260 s/op
+WorkloadResult   8: 1 op, 1220757300.00 ns, 1.2208 s/op
+WorkloadResult   9: 1 op, 1239133600.00 ns, 1.2391 s/op
+WorkloadResult  10: 1 op, 1243109800.00 ns, 1.2431 s/op
+WorkloadResult  11: 1 op, 1281281100.00 ns, 1.2813 s/op
+WorkloadResult  12: 1 op, 1253917100.00 ns, 1.2539 s/op
+WorkloadResult  13: 1 op, 1195643800.00 ns, 1.1956 s/op
+WorkloadResult  14: 1 op, 1231906800.00 ns, 1.2319 s/op
+WorkloadResult  15: 1 op, 1327786100.00 ns, 1.3278 s/op
+WorkloadResult  16: 1 op, 1279835600.00 ns, 1.2798 s/op
+WorkloadResult  17: 1 op, 1287569100.00 ns, 1.2876 s/op
+WorkloadResult  18: 1 op, 1267310900.00 ns, 1.2673 s/op
+WorkloadResult  19: 1 op, 1243890200.00 ns, 1.2439 s/op
+WorkloadResult  20: 1 op, 1234700200.00 ns, 1.2347 s/op
+WorkloadResult  21: 1 op, 1247771700.00 ns, 1.2478 s/op
+WorkloadResult  22: 1 op, 1243523400.00 ns, 1.2435 s/op
+WorkloadResult  23: 1 op, 1292013900.00 ns, 1.2920 s/op
+WorkloadResult  24: 1 op, 1276334200.00 ns, 1.2763 s/op
+WorkloadResult  25: 1 op, 1253457100.00 ns, 1.2535 s/op
+WorkloadResult  26: 1 op, 1228948100.00 ns, 1.2289 s/op
+WorkloadResult  27: 1 op, 1246410500.00 ns, 1.2464 s/op
+WorkloadResult  28: 1 op, 1222127900.00 ns, 1.2221 s/op
+WorkloadResult  29: 1 op, 1255426200.00 ns, 1.2554 s/op
+WorkloadResult  30: 1 op, 1236159800.00 ns, 1.2362 s/op
+WorkloadResult  31: 1 op, 1229957300.00 ns, 1.2300 s/op
+WorkloadResult  32: 1 op, 1237438100.00 ns, 1.2374 s/op
+GC:  30 11 3 187186152 1
+Threading:  2 0 1
+
+// AfterAll
+// Benchmark Process 4064 has exited with code 0.
+
+Mean = 1.254 s, StdErr = 0.006 s (0.51%), N = 32, StdDev = 0.036 s
+Min = 1.196 s, Q1 = 1.230 s, Median = 1.244 s, Q3 = 1.270 s, Max = 1.349 s
+IQR = 0.040 s, LowerFence = 1.170 s, UpperFence = 1.329 s
+ConfidenceInterval = [1.231 s; 1.277 s] (CI 99.9%), Margin = 0.023 s (1.84% of Mean)
+Skewness = 1.16, Kurtosis = 3.82, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2022-10-05 9:12 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchmarkService.GetAuthors_Optimized: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 922add07-7f81-4549-87ef-7ff6e51ae93c.dll --benchmarkName OptimizeMePlease.BenchmarkService.GetAuthors_Optimized --job Default --benchmarkId 1 in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 268600.00 ns, 268.6000 us/op
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: Lambda expression used inside Include is not valid.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at OptimizeMePlease.BenchmarkService.GetAuthors_Optimized() in C:\Users\Admin\Downloads\OptimizeMePlease-main\BenchmarkService.cs:line 93
+   at BenchmarkDotNet.Autogenerated.Runnable_1.WorkloadActionNoUnroll(Int64 invokeCount) in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c\922add07-7f81-4549-87ef-7ff6e51ae93c.notcs:line 525
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineFactory.Jit(Engine engine, Int32 jitIndex, Int32 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_1.Run(IHost host, String benchmarkName) in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c\922add07-7f81-4549-87ef-7ff6e51ae93c.notcs:line 380
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\Admin\Downloads\OptimizeMePlease-main\bin\Release\netcoreapp3.1\922add07-7f81-4549-87ef-7ff6e51ae93c\922add07-7f81-4549-87ef-7ff6e51ae93c.notcs:line 61
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 17096 has exited with code -1.
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2022-10-05 9:11 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\OptimizeMePlease.BenchmarkService-report.csv
+  BenchmarkDotNet.Artifacts\results\OptimizeMePlease.BenchmarkService-report-github.md
+  BenchmarkDotNet.Artifacts\results\OptimizeMePlease.BenchmarkService-report.html
+
+// * Detailed results *
+BenchmarkService.GetAuthors: DefaultJob
+Runtime = .NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.254 s, StdErr = 0.006 s (0.51%), N = 32, StdDev = 0.036 s
+Min = 1.196 s, Q1 = 1.230 s, Median = 1.244 s, Q3 = 1.270 s, Max = 1.349 s
+IQR = 0.040 s, LowerFence = 1.170 s, UpperFence = 1.329 s
+ConfidenceInterval = [1.231 s; 1.277 s] (CI 99.9%), Margin = 0.023 s (1.84% of Mean)
+Skewness = 1.16, Kurtosis = 3.82, MValue = 2
+-------------------- Histogram --------------------
+[1.194 s ; 1.226 s) | @@@@@
+[1.226 s ; 1.256 s) | @@@@@@@@@@@@@@@@@@
+[1.256 s ; 1.295 s) | @@@@@@
+[1.295 s ; 1.324 s) | 
+[1.324 s ; 1.353 s) | @@@
+---------------------------------------------------
+
+BenchmarkService.GetAuthors_Optimized: DefaultJob
+Runtime = .NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19044.2006/21H2/November2021Update)
+Intel Core i5-10400 CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.400
+  [Host]     : .NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2  [AttachedDebugger]
+  DefaultJob : .NET Core 3.1.28 (CoreCLR 4.700.22.36202, CoreFX 4.700.22.36301), X64 RyuJIT AVX2
+
+
+|               Method |    Mean |    Error |   StdDev |       Gen0 |       Gen1 |      Gen2 |   Allocated |
+|--------------------- |--------:|---------:|---------:|-----------:|-----------:|----------:|------------:|
+|           GetAuthors | 1.254 s | 0.0231 s | 0.0359 s | 30000.0000 | 11000.0000 | 3000.0000 | 187186152 B |
+| GetAuthors_Optimized |      NA |       NA |       NA |          - |          - |         - |           - |
+
+Benchmarks with issues:
+  BenchmarkService.GetAuthors_Optimized: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+  Summary -> Detected error exit code from one of the benchmarks. It might be caused by following antivirus software:
+        - Windows Defender (windowsdefender://)
+Use InProcessEmitToolchain or InProcessNoEmitToolchain to avoid new process creation.
+
+
+// * Hints *
+Outliers
+  BenchmarkService.GetAuthors: Default -> 5 outliers were removed (1.37 s..1.46 s)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Gen1      : GC Generation 1 collects per 1000 operations
+  Gen2      : GC Generation 2 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 s       : 1 Second (1 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:07 (67.36 sec), executed benchmarks: 2
+
+Global total time: 00:01:23 (83.19 sec), executed benchmarks: 2
+// * Artifacts cleanup *
